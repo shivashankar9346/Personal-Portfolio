@@ -4,8 +4,8 @@ import {Navbar} from '@/layout/Navbar'
 import {About} from '@/section/About'
 import {Experience} from '@/section/Experience'
 import {Projects} from '@/section/Projects'
-import {Testimonials} from '@/section/Testimonials'
 import {Contact} from '@/section/Contact'
+import { Footer } from './layout/Footer'
 
 
 const App = () => {
@@ -15,10 +15,10 @@ const App = () => {
       <main>
         <Hero/>
         <About/>
-        <Experience/>
         <Projects/>
-        <Testimonials/>
+        <Experience/>
         <Contact/>
+        <Footer/>
       </main>
     </div>
   )

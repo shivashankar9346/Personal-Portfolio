@@ -10,7 +10,7 @@
   --color-primary-foreground : #ffffff;
 
   --color-secondary : #1f2830;
-  --color-muted-foreground : #20b2a6;
+  --color-secondary-foreground : #20b2a6;
 
   --color-muted : #252e37;
   --color-muted-foreground : #7a8491;
@@ -26,6 +26,9 @@
 @layer base{
   html{
     scroll-behavior : smooth;
+  }
+  button{
+    cursor: pointer;
   }
 
   body{
@@ -161,5 +164,10 @@
     background-color: color-mix( in srgb, #26c4b8 15% , transparent);
     backdrop-filter:blur(16px);
     box-shadow:0 0 20px color-mix( in srgb , #26c4b8 20% , transparent)
+  }
+  .timeline-glow{
+    box-shadow: 0 0 40px
+    color-mix(in srgb, var(--color-primary) 35%, transparent),
+    0 0 80px color-mix(in srgb var(--color-primary) 25%, transparent)
   }
 }

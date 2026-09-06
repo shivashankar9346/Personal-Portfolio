@@ -1,23 +1,34 @@
 import { Button } from "@/components/Button"
 import { Menu  , X} from "lucide-react";
+import { useEffect } from "react";
 import { useState } from "react";
 
 
 const navLinks = [
     { href: "#about", label: "About" },
-    { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
-    { href: "#testimonials", label: "Testimonials" },
+    { href: "#experience", label: "Experience" },
     { href: "#contact", label: "Contact" }
 ]
 export const Navbar = () => {
 
-
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const[isScrolled , setIsScrolled]=useState(false);
+
+    useEffect(()=>{
+        const handleScroll=()=>{
+            setIsScrolled(window.scrollY>50);
+         
+        }
+        window.addEventListener("scroll" , handleScroll)
+
+        return ()=> window.removeEventListener("scroll", handleScroll)
+    },[])
 
 
     return (
-        <header className="fixed top-0 left-0 right-0 bg-transparent py-5 z-50">
+        <header className={`fixed top-0 left-0 right-0 transition-all duraton-500
+        ${isScrolled ? " glass-strong py-3" : "bg-transparent py-5"} bg-transparent py-5 z-50`}>
             <nav className=" container mx-auto px-6 flex items-center justify-between">
                 <a href="#" className="text-2xl font-bold tracking-tight hover:text-primary">
                     SHIVA SHANKAR <span className="text-primary">.</span>
@@ -66,6 +77,7 @@ export const Navbar = () => {
                             <a
                                 key={index}
                                 href={link.href}
+                                onClick={()=>setIsMobileMenuOpen(false)}
                                 className="text-lg text-muted-foreground hover:text-foreground py-2"
                             >
                                 {link.label}

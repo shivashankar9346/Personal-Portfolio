@@ -1,5 +1,5 @@
 import { Button } from "@/components/Button"
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { AnimatedBorderButton } from "../components/animatedBorderButton";
 
@@ -48,7 +48,7 @@ export const Hero = () => {
 
         {/* Content */}
 
-        <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+        <div className="container mx-auto  pt-25 pb-17 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center ">
                 {/* left column-Text content */}
                 <div className="space-y-8">
@@ -82,7 +82,10 @@ export const Hero = () => {
                             Contact Me <ArrowRight className="w-5 h-5" />
                         </Button>
 
-                        <AnimatedBorderButton />
+                        <AnimatedBorderButton >
+                            <Download className="w-5 h-5"/>
+                            Download CV
+                            </AnimatedBorderButton>
 
                     </div>
                     {/* Socail Links */}
@@ -144,12 +147,23 @@ export const Hero = () => {
                         (skill,idx)=>(
                             <div key={idx} className="flex-shrink-0 px-8 py-4">
                                 <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground
-                                ">{skill}</span>
+                                transition-color">{skill}</span>
                             </div>
                         ) ) }
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade animation-delay-800">
+        <a 
+        href="#about"
+        className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary"
+        >
+            <span className="text-xs uppercase tracking-wider">Scroll</span>
+            <ChevronDown className="w-6 h-6 animate-bounce"/>
+
+        </a>
         </div>
 
     </section>
