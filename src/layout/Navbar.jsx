@@ -1,5 +1,5 @@
 import { Button } from "@/components/Button"
-import { Menu  , X} from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -13,17 +13,17 @@ const navLinks = [
 export const Navbar = () => {
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const[isScrolled , setIsScrolled]=useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
-    useEffect(()=>{
-        const handleScroll=()=>{
-            setIsScrolled(window.scrollY>50);
-         
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+
         }
-        window.addEventListener("scroll" , handleScroll)
+        window.addEventListener("scroll", handleScroll)
 
-        return ()=> window.removeEventListener("scroll", handleScroll)
-    },[])
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
 
 
     return (
@@ -53,31 +53,38 @@ export const Navbar = () => {
 
                 {/* CTA button */}
                 <div className="hidden md:block">
-                    <Button size="sm">
+                    <Button
+                        size="sm"
+                        onClick={() => {
+                            document.getElementById("contact")?.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                        }}
+                    >
                         Contact Me
                     </Button>
                 </div>
 
                 {/* mobile menu button */}
 
-                <button 
-                className="md:hidden p-2 text-foreground cursor-pointer  "
-                 onClick={()=>setIsMobileMenuOpen((prev)=>!prev)}
-                  >
-                    {isMobileMenuOpen ? <X size={24}/>: <Menu size={24} />}
+                <button
+                    className="md:hidden p-2 text-foreground cursor-pointer  "
+                    onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+                >
+                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
             </nav>
 
             {/* mobile menu */}
 
-            { isMobileMenuOpen && (
+            {isMobileMenuOpen && (
                 <div className="md:hidden glass-strong  animate-fade-in">
                     <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
                         {navLinks.map((link, index) => (
                             <a
                                 key={index}
                                 href={link.href}
-                                onClick={()=>setIsMobileMenuOpen(false)}
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-lg text-muted-foreground hover:text-foreground py-2"
                             >
                                 {link.label}
