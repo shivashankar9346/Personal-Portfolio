@@ -25,14 +25,14 @@ const highlights = [
 
 export const About = () => {
     return (
-        <section id="about" className="py-32 relative overflow-hidden">
-            <div className="container mx-auto px-6 relative z-10">
+        <section id="about" className="py-15 relative overflow-hidden">
+            <div className="container mx-auto px- relative z-10">
+                 <div className="animate-fade-in text-center py-10">
+                            <span className="text-secondary-foreground text-lg md:text-4xl font-semibold  foot-medium tracking-wider uppercase textalign-center ">About Me</span>
+                        </div>
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* left column */}
                     <div className="space-y-8">
-                        <div className="animate-fade-in">
-                            <span className="text-secondary-foreground text-sm foot-medium tracking-wider uppercase ">About Me</span>
-                        </div>
                         <h2 className=" text-4xl md:text-5xl leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
                             Building the future
                             <span className="font-serif italic font-normal text-white"> one component at a  time.</span>
@@ -43,14 +43,14 @@ export const About = () => {
                                 I’m Shiva Shankar Kotte, a passionate Full Stack Developer and a B.Sc. graduate in Artificial Intelligence and Machine Learning.
                                 I enjoy building modern, responsive, and user-friendly web applications that combine clean design with practical functionality. I have a strong interest in web development and continuously work on improving my technical and problem-solving skills.
                             </p>
-                            <p>
+                            {/* <p>
                                 My technical skills include HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB. I enjoy working on both frontend and backend development, creating responsive interfaces, developing REST APIs, and connecting applications with databases.
                                 Through personal and academic projects, I have gained hands-on experience in turning ideas into functional web applications.
-                            </p>
-                            <p>
+                            </p> */}
+                            {/* <p>
                                 I’m always eager to learn new technologies, take on challenging projects, and grow as a developer. My goal is to become a skilled Full Stack Developer who can build scalable and impactful digital solutions.
                                 I believe in continuous learning, writing clean code, and creating experiences that are simple, efficient, and meaningful for users.
-                            </p>
+                            </p> */}
                         </div>
                         <div className="glass rounded-2xl p-6 glow-border animate-fade-in animate-dealy-300">
                             <p className="text-lg font-medium italic text-foreground">

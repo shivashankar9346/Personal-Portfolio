@@ -1,51 +1,63 @@
 import { ArrowUpRight } from "lucide-react"
 import { FaGithub } from "react-icons/fa"
-import {AnimatedBorderButton} from "@/components/animatedBorderButton"
+import { AnimatedBorderButton } from "@/components/animatedBorderButton"
 
 const projects = [
     {
-        title: 'Citi solve',
-        description: "CleanOps is a web-based platform that connects citizens and municipal departments on a single system to manage cleanliness issues in the city.",
-        image: "/project-1.png",
-        tags: ["Html", "Css", "Javascript", "React"],
-        link: "#",
-        github: "#"
+        title: 'SwapZone – Student Campus Marketplace',
+        description: `
+        Developed a full-stack student marketplace using React, Node.js, Express.js, and MongoDB with authentication, item listings, search, filtering, wishlist, and swap features.
+
+        Implemented REST APIs, JWT-based protected routes, image uploads, and responsive UI for a seamless campus buying and selling experience.
+        `,
+        image: "/project.1.png",
+        tags: [ "ReactJs", "ExpressJs", "MongoDB"],
+        link: "https://swapzone-1-z61x.onrender.com",
+        github: "https://github.com/shivashankar9346/SwapZone"
     },
     {
-        title: 'AI Task Planner',
-        description: "CleanOps is a web-based platform that connects citizens and municipal departments on a single system to manage cleanliness issues in the city.",
-        image: "/project-3.png",
-        tags: ["Html", "Css", "Javascript", "React"],
-        link: "#",
-        github: "#"
+        title: 'Event Management System | MERN Stack',
+        description: `
+        Developed a full-stack event management platform using React, Node.js, Express.js, and MongoDB to create, search, and manage events with category filtering and pagination.
+
+        Implemented event registration and attendance tracking with seat availability management and RESTful APIs for efficient data handling.
+        `,
+        image: "/project.2.jpeg",
+        tags: [ "ReactJs", "ExpressJs", "MongoDB"],
+        link: "https://event-management-system-frontend-fl0q.onrender.com",
+        github: "https://github.com/shivashankar9346/Event-Management-System"
     },
     {
-        title: 'Event Management',
-        description: "CleanOps is a web-based platform that connects citizens and municipal departments on a single system to manage cleanliness issues in the city.",
-        image: "/project-2.png",
+        title: 'CleanOps – Waste Management Platform',
+        description: `
+        Developed a responsive frontend using React.js for reporting and managing waste collection requests with a clean, user-friendly interface.
+
+        Implemented reusable components, role-based UI, form handling, request tracking, and responsive layouts for citizens, operators, and admins.
+        `,
+        image: "/project.3.png",
         tags: ["Html", "Css", "Javascript", "React"],
-        link: "#",
-        github: "#"
+        link: "https://cleanops-efficient-operater-project.netlify.app/",
+        github: "https://github.com/shivashankar9346/cleanOps-project"
     }
 ]
 
 export const Projects = () => {
     return (
-        <section id="projects" className=" py-32 relative overflow-hidden">
+        <section id="projects" className=" py-20 relative overflow-hidden">
             {/* Background glows */}
             <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
             <div className="absolute bottom-1/4 left-0 w-64 bg-highlight/5 rounded-full blur-3xl"></div>
             <div className="container mx-auto px-6 relative z-10">
                 {/* section header */}
                 <div className="text-center mx-auto max-w-3xl mb-16">
-                    <span className="text-secondary-foreground text-sm font-medium tracking-wider  uppercase  animate-fade-in">Featured Work</span>
+                    <span className="text-secondary-foreground text-lg md:text-4xl font-semibold  foot-medium tracking-wider uppercase textalign-center ">Featured Works</span>
                     <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground"> project that
                         <span className="font-serif italic font-normal text-white"> {" "}
                             make an impact.
                         </span>
                     </h2>
                     <p className="text-muted-foreground animate-fade-in animated-delay-200">
-                        A Selection pf my recent work , from complex web applications
+                        A Selection of my recent work , from complex web applications
                         to innovative tools that solve real-world problems.
                     </p>
                 </div>
@@ -86,7 +98,7 @@ export const Projects = () => {
                                     group-hover:-translate-y-1 translate-all"
                                     />
                                 </div>
-                                <p className="text-muted-foreground text-sm">{project.description}</p>
+                                <p className="text-muted-foreground text-sm whitespace-pre-line">{project.description}</p>
                                 <div className="flex flex-wrap gap-2">
                                     {project.tags.map((tag, tagIdx) => (
                                         <span key={tagIdx} className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300">{tag}</span>
@@ -100,10 +112,14 @@ export const Projects = () => {
                 </div>
                 {/* view all CTA */}
                 <div className="text-center mt-12 animate-fade-in animation-delay-500">
-                    <AnimatedBorderButton>
+                    <AnimatedBorderButton
+                        onClick={() =>
+                            window.open("https://github.com/shivashankar9346", "_blank")
+                        }
+                    >
                         View All Projects
-                        <ArrowUpRight className="w-5 h-5"/>
-                         </AnimatedBorderButton>
+                        <ArrowUpRight className="w-5 h-5" />
+                    </AnimatedBorderButton>
                 </div>
             </div>
         </section>

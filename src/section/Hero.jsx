@@ -49,7 +49,7 @@ export const Hero = () => {
         {/* Content */}
 
         <div className="container mx-auto  pt-25 pb-17 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center ">
+            <div className="grid lg:grid-cols-2 gap-12  ">
                 {/* left column-Text content */}
                 <div className="space-y-8">
                     <div className="animate-fade-in">
@@ -60,22 +60,21 @@ export const Hero = () => {
                     </div>
                     {/* Headline/ */}
                     <div className="space-y-4">
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                            crafting <span className="text-primary glow-text">digital</span>
-                            <br />
-                            experincec  with
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in animation-delay-100">
+                            Full Stack <span className="text-primary glow-text">Developer</span>
+                            <br />Turning Ideas into  <span className="text-primary glow-text">Interactive</span>
                             <br />
                             <span className="font-serif italic font-normal text-white">
-                                precision.
+                                Web Experiences.
                             </span>
                         </h1>
-                        <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-800">
-                            Hi, I'm shiva shankar kotte - a full stack developer specialixing in react, nodejs and expressjs . I
-                            I build scalable and responsive web applications that deliver seamless user experiences.
 
+                          <p className="text-1xl md:text-1xl font-semibold text-primary max-w-lg animate-fade-in animation-delay-800 glow-text">
+                        Designing, Developing & Shipping with Intention.
+                    </p>
 
-                        </p>
                     </div>
+
                     {/* CTAs */}
                     <div className="flex flex-wrap gap-4 animated-fade-in animation-delay-300">
                         <Button
@@ -99,9 +98,10 @@ export const Hero = () => {
                             </AnimatedBorderButton>
                         </a>
                     </div>
+
                     {/* Socail Links */}
 
-                    <div className=" flex items-center gap-4 animate-fade-in animation-delay-400">
+                    <div className=" flex items-center gap-4  px-10 animate-fade-in animation-delay-400">
                         <span className="text-sm text-muted-foreground">Follow :</span>
                         {[
                             { icon: FaGithub, href: "https://github.com/shivashankar9346" },
@@ -125,22 +125,23 @@ export const Hero = () => {
                         to-primary/10 blur-2xl animate-pulse"
                         />
                         <div className="relative glass rounded-3xl p-2 glow-border">
-                            <img src="/profile-image.jpeg" alt="Shiva shankar" className="w-full aspect-[4/5] object-cover rounded-2xl" />
+                            <img src="/Portfolio-photo.png" alt="Shiva shankar" className="w-full aspect-[4/5] object-cover rounded-2xl" />
 
                             {/* floating badge */}
 
-                            <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                            {/* <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
                                 <div className="flex items-center gap-3">
                                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                                     <span className="text-sm font-medium">Availabe for work</span>
                                 </div>
-                            </div>
+                            </div> */}
+
                             {/* Stats badge */}
-                            <div className="absolute -top-4 -left-4 glass rounded px-4 py-3 animate-float animation-delay-500">
+                            {/* <div className="absolute -top-4 -left-4 glass rounded px-4 py-3 animate-float animation-delay-500">
                                 <div className="text-2xl font-bold text-primary">Fresher</div>
-                                <div></div>
-                            </div>
+                            </div> */}
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -148,8 +149,8 @@ export const Hero = () => {
             {/* Skills */}
 
             <div className="mt-20 animate-fade-in animation-delay-600">
-                <p className="text-sm text-muted-foreground mb-6 text-center">
-                    Techonologies i work with
+                <p className="text-lg text-muted-foreground mb-6 text-center">
+                    My Tech Stack
                 </p>
                 <div className="relative overflow-hidden">
                     <div className="flex animate-marquee">
@@ -165,7 +166,7 @@ export const Hero = () => {
                 </div>
             </div>
         </div>
-
+        {/* 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade animation-delay-800">
             <a
                 href="#about"
@@ -175,7 +176,7 @@ export const Hero = () => {
                 <ChevronDown className="w-6 h-6 animate-bounce" />
 
             </a>
-        </div>
+        </div> */}
 
     </section>
     )
