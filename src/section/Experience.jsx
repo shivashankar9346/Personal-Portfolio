@@ -44,7 +44,7 @@ export const Experience = () => {
                         Experience that <span className="font-serif italic font-normal text-white">{" "}speaks volumes.</span>
                     </h2>
                     <p className="text-muted-foreground animate-fade-in animation-delay-200">
-                        A timeline of my professonial groeth ,from curios beginner to senior engeenier
+                       A Timeline of My Professional Growth: From Curious Beginner to Senior Engineer
                     </p>
                 </div>
                 {/* timeline */}
